@@ -67,6 +67,13 @@ public class NewsCrud implements INewsCrud {
 
     @Override
     public News getNews(int nId) {
+            News tempNews = new News();
+            for (News news : getAllNews()) {
+                if (news.getNewsId() == nId) {
+                    tempNews = news;
+                    return tempNews;
+                }
+            }
         return null;
     }
 

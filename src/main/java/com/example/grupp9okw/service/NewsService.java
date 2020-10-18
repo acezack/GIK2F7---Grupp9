@@ -18,4 +18,8 @@ public class NewsService {
     public List<News> getAllNews() {
         return newsCrud.getAllNews();
     }
+
+    public News getNews(int nId) {
+        return newsCrud.getNews(nId);
+    }
 }

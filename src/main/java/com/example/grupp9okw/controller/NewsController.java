@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/orreskogenskickers")
@@ -23,5 +25,11 @@ public class NewsController {
     public String getAllNews(Model model) {
         model.addAttribute("news", newsService.getAllNews());
         return "news";
+    }
+
+    @GetMapping(path="/nyheter/{newsId}")
+    public String getNews(Model model, @PathVariable int newsId) {
+        model.addAttribute("news", newsService.getNews(newsId));
+        return "a_news";
     }
 }

@@ -25,6 +25,7 @@ public class MainController {
         for (News news : newsService.getAllNews()) {
             News tempNews = new News();
             tempNews = news;
+            //Trimmar brödtexten till maximalt 150 tecken
             tempNews.setText(news.getText().substring(0, 150));
             summaryNews.add(tempNews);
         }
