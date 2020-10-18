@@ -16,6 +16,7 @@ public class NewsController {
 
     @GetMapping(path="/nyheter")
     public String getAllNews(Model model) {
+        model.addAttribute("news", newsService.getAllNews());
         return "news";
     }
 }

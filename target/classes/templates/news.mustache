@@ -4,56 +4,17 @@
 
 <div class="news">
 
+{{#news}}
     <div class="news_item">
-        <h4 class="news_item__heading">Rubrik på nyhet</h4>
-        <h5 class="news_item__heading2">Av: <a href="mailto: mail@mail.com">Magnus Adminsson</a> |
-            2020-10-15</h5>
-        <img src="../images/trees-1209660_1920.jpg" alt="Skog" class="news_item__image">
-        <div class="news_item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Itaque, adipisci autem pariatur dicta alias quos, aspernatur doloremque est ut aliquid
-            placeat dignissimos praesentium! Esse, quibusdam. Pariatur iusto quidem odit ipsum.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque possimus ullam?
-            Veniam quasi eligendi aperiam eius eaque deserunt possimus laboriosam modi nostrum
-            facilis. Perferendis pariatur at est recusandae modi?
-            Ea, dolores tenetur voluptas incidunt quos sit ab ullam quis architecto repudiandae
-            voluptate facilis, praesentium quibusdam iure eligendi dignissimos ducimus nam. Omnis
-            obcaecati itaque, ipsa optio eveniet nisi sed ullam?
-            Labore magnam nisi omnis optio modi itaque nostrum repellat hic magni quasi dolorum
-            dolore cum distinctio eius aperiam, ipsa earum, perferendis iste nemo maxime aliquam
-            architecto fugit. Saepe, quisquam suscipit.
-            Est fugiat eveniet sit dolorem deserunt! Provident est non obcaecati deserunt, ea, earum
-            voluptate repudiandae quae labore debitis facere iusto. Veniam optio ipsa necessitatibus
-            neque recusandae maxime culpa, saepe animi.
-            Beatae, in? Sunt odio vitae expedita, corrupti tenetur quibusdam nobis, impedit
-            assumenda, repellendus possimus nesciunt incidunt vero quis sit quasi animi? Cupiditate
-            veniam ipsa officia, doloremque ab aperiam totam tenetur?
+        <h4 class="news_item__heading">{{heading}}</h4>
+        <h5 class="news_item__heading2">Av: <a href="mailto: {{addedBy.email}}">{{addedBy.firstName}} {{addedBy.lastName}}</a> |
+            {{date}}</h5>
+        <img src="{{picture}}" alt="Nyhetsbild" class="news_item__image">
+        <div class="news_item__text">{{text}}
         </div>
     </div>
+{{/news}}
 
-    <div class="news_item">
-        <h4 class="news_item__heading">Rubrik på nyhet</h4>
-        <h5 class="news_item__heading2">Av: <a href="mailto: mail@mail.com">Magnus Adminsson</a> |
-            2020-10-15</h5>
-        <img src="../images/trees-1209660_1920.jpg" alt="Skog" class="news_item__image">
-        <div class="news_item__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Itaque, adipisci autem pariatur dicta alias quos, aspernatur doloremque est ut aliquid
-            placeat dignissimos praesentium! Esse, quibusdam. Pariatur iusto quidem odit ipsum.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque possimus ullam?
-            Veniam quasi eligendi aperiam eius eaque deserunt possimus laboriosam modi nostrum
-            facilis. Perferendis pariatur at est recusandae modi?
-            Ea, dolores tenetur voluptas incidunt quos sit ab ullam quis architecto repudiandae
-            voluptate facilis, praesentium quibusdam iure eligendi dignissimos ducimus nam. Omnis
-            obcaecati itaque, ipsa optio eveniet nisi sed ullam?
-            Labore magnam nisi omnis optio modi itaque nostrum repellat hic magni quasi dolorum
-            dolore cum distinctio eius aperiam, ipsa earum, perferendis iste nemo maxime aliquam
-            architecto fugit. Saepe, quisquam suscipit.
-            Est fugiat eveniet sit dolorem deserunt! Provident est non obcaecati deserunt, ea, earum
-            voluptate repudiandae quae labore debitis facere iusto. Veniam optio ipsa necessitatibus
-            neque recusandae maxime culpa, saepe animi.
-            Beatae, in? Sunt odio vitae expedita, corrupti tenetur quibusdam nobis, impedit
-            assumenda, repellendus possimus nesciunt incidunt vero quis sit quasi animi? Cupiditate
-            veniam ipsa officia, doloremque ab aperiam totam tenetur?
-        </div>
     </div>
 </div>
 

@@ -23,7 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d3db30f-0f47-4282-9661-d8c322c7309b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/AdminVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/AdminVerify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/INewsCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/INewsCrud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/NewsCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/NewsCrud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/news.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/news.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/News.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/News.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/AdminVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/AdminVerify.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/INewsCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/INewsCrud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/NewsCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/NewsCrud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/service/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/service/NewsService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +132,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="411" y="320" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1603009285014" />
+    <state x="600" y="482" key="#com.intellij.ide.util.MemberChooser" timestamp="1603018745689">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="600" y="482" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1603018745689" />
     <state x="607" y="544" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1602853543194">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -129,46 +148,46 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1535" y="609" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603011107428" />
-    <state width="1489" height="253" key="GridCell.Tab.0.bottom" timestamp="1603011152709">
+    <state width="1550" height="265" key="GridCell.Tab.0.bottom" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152709" />
-    <state width="1489" height="253" key="GridCell.Tab.0.center" timestamp="1603011152709">
+    <state width="1550" height="265" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.0.center" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152709" />
-    <state width="1489" height="253" key="GridCell.Tab.0.left" timestamp="1603011152708">
+    <state width="1550" height="265" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.0.left" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152708" />
-    <state width="1489" height="253" key="GridCell.Tab.0.right" timestamp="1603011152709">
+    <state width="1550" height="265" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.0.right" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152709" />
-    <state width="1489" height="253" key="GridCell.Tab.1.bottom" timestamp="1603011152709">
+    <state width="1550" height="265" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.1.bottom" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152709" />
-    <state width="1489" height="253" key="GridCell.Tab.1.center" timestamp="1603011152709">
+    <state width="1550" height="265" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.1.center" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152709" />
-    <state width="1489" height="253" key="GridCell.Tab.1.left" timestamp="1603011152709">
+    <state width="1550" height="265" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.1.left" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152709" />
-    <state width="1489" height="253" key="GridCell.Tab.1.right" timestamp="1603011152709">
+    <state width="1550" height="265" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.1.right" timestamp="1603019088081">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1489" height="253" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603011152709" />
+    <state width="1550" height="265" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
     <state x="727" y="131" key="SettingsEditor" timestamp="1603009617269">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -186,6 +205,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="433" y="441" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1602855878877" />
+    <state x="383" y="573" width="672" height="678" key="search.everywhere.popup" timestamp="1603018731818">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="383" y="573" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1603018731818" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GIK2F7___Grupp9$Grupp9okwApplication.ic" NAME="Grupp9okwApplication Coverage Results" MODIFIED="1603009509260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
