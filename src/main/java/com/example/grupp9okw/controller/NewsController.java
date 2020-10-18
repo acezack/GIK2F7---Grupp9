@@ -14,6 +14,11 @@ public class NewsController {
     @Autowired
     private NewsService newsService;
 
+    @GetMapping(path ="/admin")
+    public String getPageAdmin(Model model) {
+        return "a_main";
+    }
+
     @GetMapping(path="/nyheter")
     public String getAllNews(Model model) {
         model.addAttribute("news", newsService.getAllNews());

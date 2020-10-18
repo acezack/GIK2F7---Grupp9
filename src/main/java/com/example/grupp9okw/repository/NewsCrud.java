@@ -23,22 +23,20 @@ public class NewsCrud implements INewsCrud {
             Statement statementNews  = connection.createStatement();
             Statement statementAdmin  = connection.createStatement();
             String sqlSelectAllNews = "SELECT * FROM news";
-            ResultSet resultSet = statementNews.executeQuery(sqlSelectAllNews);
-            //Admin tempAdmin = new Admin(5, "Marcus", "Berg", "massus@outlook.com", "massus", "lösenord");
-            Admin tempAdmin = new Admin();
-
-            int adminId = 0;
-
+            String sqlSelectAllAdmin = "SELECT * FROM admin WHERE adminid = ";
+            ResultSet resultSetNews = statementNews.executeQuery(sqlSelectAllNews);
 
             //TAR IN ALLA NYHETER
-            while (resultSet.next()) {
+            while (resultSetNews.next()) {
+                News tempNews = new News();
+                Admin tempAdmin = new Admin();
+                int adminId = 0;
 
                 //TAR FÖRST IN ADMIN
                 //sparar ner id på admin som skrivit artikeln
-                adminId = resultSet.getInt("addedby");
-                //Hämtar in datat från databasen och sparar ner admin till ett Admin-objekt
-                String sqlSelectAllAdmin = "SELECT * FROM admin WHERE adminid = " + Integer.toString(adminId);
-                ResultSet resultSetAdmin = statementAdmin.executeQuery(sqlSelectAllAdmin);
+                adminId = resultSetNews.getInt("addedby");
+                //Hämtar in datat från databasen och sparar ner den admin som skrivit artikeln genom sitt id till ett Admin-objekt
+                ResultSet resultSetAdmin = statementAdmin.executeQuery(sqlSelectAllAdmin.concat(Integer.toString(adminId)));
                 while (resultSetAdmin.next()) {
                     tempAdmin.setAdminId(resultSetAdmin.getInt("adminid"));
                     tempAdmin.setFirstName(resultSetAdmin.getString("firstname"));
@@ -48,16 +46,15 @@ public class NewsCrud implements INewsCrud {
                     tempAdmin.setPassword(resultSetAdmin.getString("password"));
                 }
 
-                News tempNews = new News();
-                tempNews.setNewsId(resultSet.getInt("newsid"));
-                tempNews.setHeading(resultSet.getString("heading"));
-                tempNews.setDate(resultSet.getString("date"));
-                tempNews.setPicture(resultSet.getString("picture"));
+                tempNews.setNewsId(resultSetNews.getInt("newsid"));
+                tempNews.setHeading(resultSetNews.getString("heading"));
+                tempNews.setDate(resultSetNews.getString("date"));
+                tempNews.setPicture(resultSetNews.getString("picture"));
                 tempNews.setAddedBy(tempAdmin);
-                tempNews.setText(resultSet.getString("text"));
+                tempNews.setText(resultSetNews.getString("text"));
                 news.add(tempNews);
             }
-            resultSet.close();
+            resultSetNews.close();
             statementNews.close();
             connection.close();
             return news;

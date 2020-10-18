@@ -23,22 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d3db30f-0f47-4282-9661-d8c322c7309b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/a_main.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/NewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/model/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/AdminVerify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/AdminVerify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/INewsCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/INewsCrud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/NewsCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/NewsCrud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/news.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/news.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/NewsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/News.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/News.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/AdminVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/AdminVerify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/INewsCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/INewsCrud.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/NewsCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/NewsCrud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/service/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/service/NewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/news.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/news.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,27 +70,39 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.grupp9okw" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Projektarbete\projektetkrakenv3\GIK2F7---Grupp9\src\main\resources\templates" />
+      <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Projektarbete\projektetkrakenv2\GIK2F7---Grupp9\src\main\resources\templates" />
+      <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Övrigt\Kraken\grupp9okw\src\main\resources\static\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Övrigt\Kraken\grupp9okw\src\main\resources" />
       <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Övrigt\Kraken\grupp9okw\src\main\java\com\example\grupp9okw\model" />
       <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Övrigt\Kraken\grupp9okw\src\main\resources\templates" />
       <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Övrigt\Kraken\grupp9okw\src\main\resources\static" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.grupp9okw" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Projektarbete\projektetkrakenv2\GIK2F7---Grupp9\src\main\resources\templates" />
-      <recent name="C:\Users\massu\OneDrive - Högskolan Dalarna\Kurser\GIK2F7 - Objektorienterad design och problemlösning\Övrigt\Kraken\grupp9okw\src\main\resources\static\css" />
-    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Grupp9okwApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="grupp9okw" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.grupp9okw.Grupp9okwApplication" />
@@ -148,51 +162,55 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1535" y="609" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1603011107428" />
-    <state width="1550" height="265" key="GridCell.Tab.0.bottom" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.0.bottom" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
-    <state width="1550" height="265" key="GridCell.Tab.0.center" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
+    <state width="1550" height="265" key="GridCell.Tab.0.center" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
-    <state width="1550" height="265" key="GridCell.Tab.0.left" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
+    <state width="1550" height="265" key="GridCell.Tab.0.left" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
-    <state width="1550" height="265" key="GridCell.Tab.0.right" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
+    <state width="1550" height="265" key="GridCell.Tab.0.right" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
-    <state width="1550" height="265" key="GridCell.Tab.1.bottom" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
+    <state width="1550" height="265" key="GridCell.Tab.1.bottom" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
-    <state width="1550" height="265" key="GridCell.Tab.1.center" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
+    <state width="1550" height="265" key="GridCell.Tab.1.center" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
-    <state width="1550" height="265" key="GridCell.Tab.1.left" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
+    <state width="1550" height="265" key="GridCell.Tab.1.left" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
-    <state width="1550" height="265" key="GridCell.Tab.1.right" timestamp="1603019088081">
+    <state width="1550" height="265" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
+    <state width="1550" height="265" key="GridCell.Tab.1.right" timestamp="1603022601913">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1340" height="266" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866568639" />
-    <state width="1550" height="265" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603019088081" />
+    <state width="1550" height="265" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603022601913" />
     <state x="727" y="131" key="SettingsEditor" timestamp="1603009617269">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="545" y="97" key="SettingsEditor/0.0.1920.1040/-1920.270.1920.1040@0.0.1920.1040" timestamp="1602866034421" />
     <state x="727" y="131" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1603009617269" />
+    <state x="418" y="475" key="Vcs.Push.Dialog.v2" timestamp="1603020302240">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="418" y="475" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1603020302240" />
     <state x="1572" y="657" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603010740516">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

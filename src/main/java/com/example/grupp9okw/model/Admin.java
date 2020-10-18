@@ -8,18 +8,6 @@ public class Admin {
     private String username;
     private String password;
 
-    public Admin(int adminId, String firstName, String lastName, String email, String username, String password) {
-        this.adminId = adminId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-    }
-
-    public Admin() {
-    }
-
     public int getAdminId() {
         return adminId;
     }
