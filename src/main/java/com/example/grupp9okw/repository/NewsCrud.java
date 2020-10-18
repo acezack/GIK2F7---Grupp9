@@ -26,18 +26,21 @@ public class NewsCrud implements INewsCrud {
             String sqlSelectAllAdmin = "SELECT * FROM admin WHERE adminid = ";
             ResultSet resultSetNews = statementNews.executeQuery(sqlSelectAllNews);
 
-            //TAR IN ALLA NYHETER
+            //LOOPAR IGENOM ALLA NYHETER I TABELLEN news
             while (resultSetNews.next()) {
                 News tempNews = new News();
                 Admin tempAdmin = new Admin();
-                int adminId = 0;
+                int adminId;
 
                 //TAR FÖRST IN ADMIN
-                //sparar ner id på admin som skrivit artikeln
+                //sparar ner id på admin som skrivit artikeln från den främmande nyckeln addedby i taballen news
                 adminId = resultSetNews.getInt("addedby");
-                //Hämtar in datat från databasen och sparar ner den admin som skrivit artikeln genom sitt id till ett Admin-objekt
+                // vi lägger till värdet från den främmande nyckeln addedby i news till sql-satsen sqlSelectAllAdmin
                 ResultSet resultSetAdmin = statementAdmin.executeQuery(sqlSelectAllAdmin.concat(Integer.toString(adminId)));
+                // vi loopar igenom datat i tabellen admin tills vi hittar fältet där adminid är samma som det nedsparade
+                //värdet i intvariablen adminId
                 while (resultSetAdmin.next()) {
+                    //Hämtar in det funna datat och spar ner det till ett Adminobjekt
                     tempAdmin.setAdminId(resultSetAdmin.getInt("adminid"));
                     tempAdmin.setFirstName(resultSetAdmin.getString("firstname"));
                     tempAdmin.setLastName(resultSetAdmin.getString("lastname"));
@@ -46,18 +49,19 @@ public class NewsCrud implements INewsCrud {
                     tempAdmin.setPassword(resultSetAdmin.getString("password"));
                 }
 
+                //hämtar in och skapar ett Newsobjekt
                 tempNews.setNewsId(resultSetNews.getInt("newsid"));
                 tempNews.setHeading(resultSetNews.getString("heading"));
                 tempNews.setDate(resultSetNews.getString("date"));
                 tempNews.setPicture(resultSetNews.getString("picture"));
-                tempNews.setAddedBy(tempAdmin);
+                tempNews.setAddedBy(tempAdmin); //skickar in ett Adminobjekt med den som skrivit nyheten
                 tempNews.setText(resultSetNews.getString("text"));
-                news.add(tempNews);
+                news.add(tempNews); //lägger till objektet i listan
             }
             resultSetNews.close();
             statementNews.close();
             connection.close();
-            return news;
+            return news; //returnerar listan med alla nyheter med addedby konverterat till ett Adminobjekt
         }
         catch (SQLException ex) {
             Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
@@ -68,7 +72,7 @@ public class NewsCrud implements INewsCrud {
     @Override
     public News getNews(int nId) {
             News tempNews = new News();
-            for (News news : getAllNews()) {
+            for (News news : getAllNews()) { //återanvänder getAllNews()
                 if (news.getNewsId() == nId) {
                     tempNews = news;
                     return tempNews;
