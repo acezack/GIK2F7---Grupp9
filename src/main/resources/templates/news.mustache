@@ -1,28 +1,29 @@
 {{#layout}} <!–– template layout.mustache kommer "dra in" nedanstånde html kod till sin body––>
 
+
 <h2 class="heading-sections">Nyheter</h2>
 
-<div class="news">
+<div class="main_content">
 
-{{#news}}
-    <div class="news_item">
-        <h4 class="news_item__heading">{{heading}}</h4>
-        <h5 class="news_item__heading2">Av: <a href="mailto: {{addedBy.email}}">{{addedBy.firstName}} {{addedBy.lastName}}</a> |
-            {{date}}</h5>
-        <img src="{{picture}}" alt="Nyhetsbild" class="news_item__image">
-        <div class="news_item__text">{{text}}
-        </div>
+    <div class="news">
+
+        {{#news}}
+            <div class="news_item">
+                <h4 class="news_item__heading">{{heading}}</h4>
+                <h5 class="news_item__heading2">Av: <a
+                        href="mailto: {{addedBy.email}}">{{addedBy.firstName}} {{addedBy.lastName}}</a> |
+                    {{date}}</h5>
+                <img src="{{picture}}" alt="Nyhetsbild" class="news_item__image">
+                <div class="news_item__text">{{text}}
+                </div>
+            </div>
+        {{/news}}
+
     </div>
-{{/news}}
-
-    </div>
-</div>
-
 
 </div>
 
-</div>
-<img src="images/animal-1299089_1280.png" class="main_container__image">
+<img src="/images/animal-1299089_1280.png" class="main_container__image">
 
 {{/layout}}
-{{>layout}}Q
+{{>layout}}

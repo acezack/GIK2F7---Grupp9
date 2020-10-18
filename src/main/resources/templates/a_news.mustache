@@ -2,27 +2,25 @@
 
 <h2 class="heading-sections">Nyheter</h2>
 
-<div class="news">
+<div class="main_content">
 
-    <div class="news_item">
-      <h4 class="news_item__heading">{{news.heading}}</h4>
-        <h5 class="news_item__heading2">Av: <a
-                href="mailto: {{news.addedBy.email}}">{{news.addedBy.firstName}} {{news.addedBy.lastName}}</a> |
-            {{news.date}}</h5>
-        <img src="{{news.picture}}" alt="Nyhetsbild" class="news_item__image">
-        <div class="news_item__text">{{news.text}}
+    <div class="news">
+
+        <div class="news_item">
+            <h4 class="news_item__heading">{{news.heading}}</h4>
+            <h5 class="news_item__heading2">Av: <a
+                    href="mailto: {{news.addedBy.email}}">{{news.addedBy.firstName}} {{news.addedBy.lastName}}</a> |
+                {{news.date}}</h5>
+            <img src="{{news.picture}}" alt="Nyhetsbild" class="news_item__image">
+            <div class="news_item__text">{{news.text}}
+            </div>
         </div>
+        <div class="news_item__headingfrontpage--button"><a href="/orreskogenskickers/">Gå tillbaka</a></div>
+
     </div>
-    <div class="news_item__headingfrontpage--button"><a href="/orreskogenskickers/">Gå tillbaka</a></div>
-
-</div>
 </div>
 
-
-</div>
-
-</div>
-<img src="images/animal-1299089_1280.png" class="main_container__image">
+<img src="/images/animal-1299089_1280.png" class="main_container__image">
 
 {{/layout}}
 {{>layout}}

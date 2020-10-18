@@ -27,9 +27,11 @@ public class NewsController {
         return "news";
     }
 
-    @GetMapping(path="/nyheter/{newsId}")
-    public String getNews(Model model, @PathVariable int newsId) {
+    @GetMapping(path="/nyheter/")
+    public String getNews(Model model, @RequestParam int newsId) {
+
         model.addAttribute("news", newsService.getNews(newsId));
+
         return "a_news";
     }
 }
