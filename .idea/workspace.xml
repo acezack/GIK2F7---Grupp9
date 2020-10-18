@@ -23,40 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d3db30f-0f47-4282-9661-d8c322c7309b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/news.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/Grupp9okwApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/Grupp9okwApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/LayoutAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/LayoutAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/a_news_update.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/a_news_edit.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/images.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/images.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/links.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/links.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/members.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/members.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/onenews.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/onenews.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/Grupp9okwApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/Grupp9okwApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/LayoutAdvice$Layout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/LayoutAdvice$Layout.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/LayoutAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/LayoutAdvice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/News.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/model/News.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/AdminVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/AdminVerify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/IAdminVerify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/IAdminVerify.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/INewsCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/INewsCrud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/NewsCrud.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/repository/NewsCrud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/service/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/grupp9okw/service/NewsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/images.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/images.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/layout.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/layout.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/links.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/links.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/members.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/members.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/onenews.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/onenews.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/grupp9okw/Grupp9okwApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/grupp9okw/Grupp9okwApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/NewsCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/grupp9okw/repository/NewsCrud.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../projektetkrakenv3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -107,19 +75,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Grupp9okwApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="grupp9okw" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.grupp9okw.Grupp9okwApplication" />
