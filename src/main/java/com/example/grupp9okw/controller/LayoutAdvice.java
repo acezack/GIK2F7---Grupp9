@@ -19,10 +19,10 @@ class LayoutAdvice {
     }
 
     class Layout implements Mustache.Lambda {
-        String body;
+        String main;
         @Override
         public void execute(Template.Fragment frag, Writer out) throws IOException {
-            body = frag.execute();
+            main = frag.execute();
             //tilldelar String variabeln body resultatet av renderingen i layout-attributet
             //fångar sen in detta med mustache taggarna i view:n {{{layout.body}}}
         }
