@@ -36,14 +36,8 @@ public class NewsController {
     }
 
     @GetMapping(path="/formlaggtillnyhet/")
-    public String getInputPageNews(Model model) {
+    public String addNews(Model model) {
 
-        return "hej";
-    }
-
-    @PostMapping(path="/laggtillnyhet/")
-    public String addNews(Model model, Map<String, String> newsFormRequestParams) {
-
-        return "hej";
+        return "a_news_add";
     }
 }

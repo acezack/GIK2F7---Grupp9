@@ -22,4 +22,5 @@ public class NewsService {
     public News getNews(int nId) {
         return newsCrud.getNews(nId);
     }
+    
 }
