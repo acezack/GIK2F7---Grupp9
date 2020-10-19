@@ -36,8 +36,13 @@ public class NewsController {
     }
 
     @GetMapping(path="/formlaggtillnyhet/")
-    public String addNews(Model model) {
+    public String getInputNewsPage(Model model) {
 
         return "a_news_add";
+    }
+    @GetMapping(path="/formeditnyhet/")
+    public String getInputEditNewsPage(Model model) {
+
+        return "a_news_edit";
     }
 }
