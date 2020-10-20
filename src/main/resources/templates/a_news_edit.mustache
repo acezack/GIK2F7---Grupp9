@@ -6,12 +6,13 @@
 
                 <h3 class="admin_heading">Uppdatera en nyhet</h3><br>
                 <div class="addnews__form">
-                    <form action="/action_page.php" method="POST">
-                        <p>Rubrik</p> <input type="text" name="header">
-                        <p>Bild</p> <input type="text">
+                    <form method="POST" action="/orreskogenskickers/uppdateranyhet/">
+                        <input type="hidden" name="newsId" value="{{news.newsId}}">
+                        <p>Rubrik</p> <input type="text" name="heading" value="{{news.heading}}">
+                        <p>Bild</p> <input type="text" name="picture" value="{{news.picture}}">
                         <p>Brödtext</p>
-                        <textarea name="text" rows="25" cols="60">Din artikel...</textarea><br>
-                        <button class="form__button">Uppdatera</button>
+                        <textarea name="text" rows="25" cols="60">{{news.text}}</textarea><br>
+                        <button type="submit" class="form__button">Uppdatera</button>
                     </form>
                 </div>
 

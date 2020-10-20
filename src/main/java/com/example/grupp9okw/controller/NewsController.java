@@ -59,7 +59,7 @@ public class NewsController {
     }
 
     @GetMapping(path="/formlaggtillnyhet/")
-    public String getInputNewsPage(Model model) {
+    public String inputNewsPage(Model model) {
 
         return "a_news_add";
     }
@@ -71,22 +71,61 @@ public class NewsController {
         tempNews.setPicture(allFormInput.get("picture"));
         tempNews.setText(allFormInput.get("bodytext"));
 
-        newsService.addNews(tempNews);
-        model.addAttribute("test", tempNews);
-        return "a_news_added";
+        if (newsService.addNews(tempNews)) {
+            model.addAttribute("news", tempNews);
+            return "a_news_added";
+        }
+        else {
+            return "error";
+        }
     }
 
-    @GetMapping(path="/formeditnyhet/")
-    public String getInputEditNewsPage(Model model) {
+    @GetMapping(path="/redigeranyhet/")
+    public String inputUpdateNewsPage(Model model, @RequestParam int newsId) {
 
+        model.addAttribute("news", newsService.getNews(newsId));
         return "a_news_edit";
     }
 
-    @GetMapping(path="/raderanyhet/")
-    public String deleteNews(Model model, @RequestParam int eraseNewsId) {
 
-        newsService.deleteNews(eraseNewsId);
-        return "a_news_removed";
+    @PostMapping(path="/uppdateranyhet/")
+    public String updateNews(@RequestParam Map<String, String> allFormInput, Model model) {
+        News tempNews = new News();
+        tempNews.setNewsId(Integer.valueOf(allFormInput.get("newsId")));
+        tempNews.setHeading(allFormInput.get("heading"));
+        tempNews.setPicture(allFormInput.get("picture"));
+        tempNews.setText(allFormInput.get("text"));
+
+        //model.addAttribute("test", tempNews);
+        ;
+
+        if (newsService.updateNews(tempNews)) {
+            model.addAttribute("test", tempNews);
+            return "redirect:/orreskogenskickers/nyheter";
+        }
+        else {
+            return "error";
+        }
+    }
+
+/*
+    @RequestMapping(path="/orreskogenskickers/uppdateranyhet/", method={RequestMethod.POST, RequestMethod.PUT})
+    public String updateNews(@ModelAttribute("news") News news, @RequestParam Map<String, String> allFormInput) {
+        //newsService.updateNews(news);
+        //model.addAttribute("test", news);
+        return "redirect:/orreskogenskickers/nyheter";
+        //return "a_test";
+    }*/
+
+    @GetMapping(path="/raderanyhet/")
+    public String deleteNews(Model model, @RequestParam int newsId) {
+
+        if (newsService.deleteNews(newsId)) {
+            return "a_news_removed";
+        }
+        else {
+            return "error";
+        }
 
     }
 }

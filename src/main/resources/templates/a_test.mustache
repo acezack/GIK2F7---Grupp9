@@ -1,0 +1,24 @@
+{{#layout}} <!–– template layout.mustache kommer "dra in" nedanstånde html kod till sin body––>
+
+<h2 class="heading-sections">Nyheter</h2>
+
+<div class="main_content">
+
+    <div class="news">
+
+        <div class="news_item">
+            <h4 class="news_item__heading">{{test.heading}}</h4>
+            <h4 class="news_item__heading">{{test.newsId}}</h4>
+            <img src="{{test.picture}}" alt="Nyhetsbild" class="news_item__image">
+            <div class="news_item__text">{{test.text}}
+            </div>
+        </div>
+        <div class="news_item__headingfrontpage--button"><a href="/orreskogenskickers/">Gå tillbaka</a></div>
+
+    </div>
+</div>
+
+<img src="/images/animal-1299089_1280.png" class="main_container__image">
+
+{{/layout}}
+{{>layout}}

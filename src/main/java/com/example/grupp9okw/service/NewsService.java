@@ -38,4 +38,12 @@ public class NewsService {
             return false;
         }
     }
+
+    public Boolean updateNews(News news) {
+        if(newsCrud.updateNews(news)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

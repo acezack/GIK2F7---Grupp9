@@ -83,8 +83,25 @@ public class NewsCrud implements INewsCrud {
     }
 
     @Override
-    public News updateNews(int nId) {
-        return null;
+    public Boolean updateNews(News news) {
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/IfSCHjTL9N", "IfSCHjTL9N", "DDUbgqOo1P");
+            String sqlEraseNews = "UPDATE news SET heading=?, picture=?, text=? WHERE newsid = " + news.getNewsId();
+            PreparedStatement statement = connection.prepareStatement(sqlEraseNews);
+            statement.setString(1, news.getHeading());
+            statement.setString(2, news.getPicture());
+            statement.setString(3, news.getText());
+            statement.executeUpdate();
+            statement.close();
+            connection.close();
+            return true;
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+
+
     }
 
     @Override
@@ -100,9 +117,10 @@ public class NewsCrud implements INewsCrud {
         }
         catch (SQLException ex) {
             Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
 
-        return false;
+
     }
 
     @Override
@@ -125,8 +143,9 @@ public class NewsCrud implements INewsCrud {
         }
         catch (SQLException ex) {
             Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
 
-        return false;
+
     }
 }

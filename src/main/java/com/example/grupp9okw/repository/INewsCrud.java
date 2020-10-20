@@ -8,7 +8,7 @@ public interface INewsCrud {
 
     public List<News> getAllNews();
     public News getNews(int nId);
-    public News updateNews(int nId);
+    public Boolean updateNews(News news);
     public Boolean deleteNews(int nId);
     public Boolean addNews(News news);
 
