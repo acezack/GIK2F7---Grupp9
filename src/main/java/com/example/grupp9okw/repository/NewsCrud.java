@@ -88,7 +88,20 @@ public class NewsCrud implements INewsCrud {
 
     @Override
     public Boolean deleteNews(int nId) {
-        return null;
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/IfSCHjTL9N", "IfSCHjTL9N", "DDUbgqOo1P");
+            String sqlEraseNews = "DELETE FROM news WHERE newsid = " + Integer.toString(nId);
+            PreparedStatement statement = connection.prepareStatement(sqlEraseNews);
+            statement.execute();
+            statement.close();
+            connection.close();
+            return true;
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return false;
     }
 
     @Override

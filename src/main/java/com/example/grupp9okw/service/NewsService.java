@@ -30,5 +30,12 @@ public class NewsService {
             return false;
         }
     }
-    
+
+    public Boolean deleteNews(int newsId) {
+        if(newsCrud.deleteNews(newsId)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
