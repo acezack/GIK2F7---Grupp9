@@ -96,9 +96,6 @@ public class NewsController {
         tempNews.setPicture(allFormInput.get("picture"));
         tempNews.setText(allFormInput.get("text"));
 
-        //model.addAttribute("test", tempNews);
-        ;
-
         if (newsService.updateNews(tempNews)) {
             model.addAttribute("test", tempNews);
             return "redirect:/orreskogenskickers/nyheter";
@@ -107,15 +104,6 @@ public class NewsController {
             return "error";
         }
     }
-
-/*
-    @RequestMapping(path="/orreskogenskickers/uppdateranyhet/", method={RequestMethod.POST, RequestMethod.PUT})
-    public String updateNews(@ModelAttribute("news") News news, @RequestParam Map<String, String> allFormInput) {
-        //newsService.updateNews(news);
-        //model.addAttribute("test", news);
-        return "redirect:/orreskogenskickers/nyheter";
-        //return "a_test";
-    }*/
 
     @GetMapping(path="/raderanyhet/")
     public String deleteNews(Model model, @RequestParam int newsId) {
