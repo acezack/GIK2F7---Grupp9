@@ -22,4 +22,13 @@ public class NewsService {
     public News getNews(int nId) {
         return newsCrud.getNews(nId);
     }
+
+    public Boolean addNews(News news) {
+        if(newsCrud.addNews(news)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 }

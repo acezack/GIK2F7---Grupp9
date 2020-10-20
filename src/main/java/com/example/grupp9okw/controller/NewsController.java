@@ -1,13 +1,15 @@
 package com.example.grupp9okw.controller;
 
+import com.example.grupp9okw.model.News;
 import com.example.grupp9okw.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/orreskogenskickers")
@@ -18,6 +20,27 @@ public class NewsController {
 
     @GetMapping(path ="/admin")
     public String getPageAdmin(Model model) {
+
+        int numberOfNews = 0;
+        List adminNews = new ArrayList();
+
+        //loopar igenom alla nyheter
+        for (News news : newsService.getAllNews()) {
+            News tempNews = new News();
+            tempNews = news;
+            try {
+                tempNews.setText(news.getText().substring(0, 50));
+            }
+            catch(StringIndexOutOfBoundsException exception) {
+
+            }
+            adminNews.add(tempNews);
+            numberOfNews++; //räknar antal news
+        }
+        model.addAttribute("adminnews", adminNews);
+
+        model.addAttribute("countnews", numberOfNews);
+        model.addAttribute("news", newsService.getAllNews());
         return "a_main";
     }
 
@@ -33,5 +56,29 @@ public class NewsController {
         model.addAttribute("news", newsService.getNews(newsId));
 
         return "a_news";
+    }
+
+    @GetMapping(path="/formlaggtillnyhet/")
+    public String getInputNewsPage(Model model) {
+
+        return "a_news_add";
+    }
+
+    @PostMapping(path="/laggtillnyhet/")
+    public String addNews(Model model, @RequestParam Map<String, String> allFormInput ) {
+        News tempNews = new News();
+        tempNews.setHeading(allFormInput.get("header"));
+        tempNews.setPicture(allFormInput.get("picture"));
+        tempNews.setText(allFormInput.get("bodytext"));
+
+        newsService.addNews(tempNews);
+        model.addAttribute("test", tempNews);
+        return "a_news_added";
+    }
+
+    @GetMapping(path="/formeditnyhet/")
+    public String getInputEditNewsPage(Model model) {
+
+        return "a_news_edit";
     }
 }

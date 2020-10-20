@@ -93,6 +93,26 @@ public class NewsCrud implements INewsCrud {
 
     @Override
     public Boolean addNews(News news) {
-        return null;
+        try {
+            connection = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/IfSCHjTL9N", "IfSCHjTL9N", "DDUbgqOo1P");
+            String sqlAddNews = "INSERT INTO `news` (`newsid`, `heading`, `date`, `picture`, `addedby`, `text`) " +
+                    "VALUES (NULL, ?, CURRENT_DATE(), ?, '1', ?)";
+
+
+            PreparedStatement statement = connection.prepareStatement(sqlAddNews);
+            statement.setString(1, news.getHeading());
+            statement.setString(2, news.getPicture());
+            statement.setString(3, news.getText());
+
+            statement.execute();
+            statement.close();
+            connection.close();
+            return true;
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return false;
     }
 }
