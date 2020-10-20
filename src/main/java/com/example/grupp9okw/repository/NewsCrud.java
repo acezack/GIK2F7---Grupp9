@@ -22,7 +22,7 @@ public class NewsCrud implements INewsCrud {
             connection = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/IfSCHjTL9N", "IfSCHjTL9N", "DDUbgqOo1P");
             Statement statementNews  = connection.createStatement();
             Statement statementAdmin  = connection.createStatement();
-            String sqlSelectAllNews = "SELECT * FROM news";
+            String sqlSelectAllNews = "SELECT * FROM news ORDER BY newsid DESC";
             String sqlSelectAllAdmin = "SELECT * FROM admin WHERE adminid = ";
             ResultSet resultSetNews = statementNews.executeQuery(sqlSelectAllNews);
 
@@ -37,6 +37,7 @@ public class NewsCrud implements INewsCrud {
                 adminId = resultSetNews.getInt("addedby");
                 // vi lägger till värdet från den främmande nyckeln addedby i news till sql-satsen sqlSelectAllAdmin
                 ResultSet resultSetAdmin = statementAdmin.executeQuery(sqlSelectAllAdmin.concat(Integer.toString(adminId)));
+
                 // vi loopar igenom datat i tabellen admin tills vi hittar fältet där adminid är samma som det nedsparade
                 //värdet i intvariablen adminId
                 while (resultSetAdmin.next()) {
