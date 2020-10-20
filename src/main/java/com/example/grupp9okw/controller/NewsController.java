@@ -1,6 +1,8 @@
 package com.example.grupp9okw.controller;
 
+import com.example.grupp9okw.model.Admin;
 import com.example.grupp9okw.model.News;
+import com.example.grupp9okw.repository.AdminVerify;
 import com.example.grupp9okw.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -120,12 +122,14 @@ public class NewsController {
         return "a_login";
     }
 
-    @PostMapping(path="/loggainkontroll/")
-    public String loginAdminCheck(@RequestParam Map<String, String> allFormInput, Model model) {
-        if (true){
-            return "a_main";
-        }
-        else {
+    @PostMapping("/loggainkontroll/")
+    public String loginAdminCheck(@RequestParam Map<String, String> allFormInput) {
+        Admin tempAdmin = new Admin();
+        tempAdmin.setUsername(allFormInput.get("username"));
+        tempAdmin.setPassword(allFormInput.get("password"));
+        if (newsService.checkCredentials(tempAdmin)) {
+            return "redirect:/orreskogenskickers/admin";
+        } else {
             return "error";
         }
     }

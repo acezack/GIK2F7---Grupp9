@@ -1,5 +1,6 @@
 package com.example.grupp9okw.service;
 
+import com.example.grupp9okw.model.Admin;
 import com.example.grupp9okw.model.News;
 import com.example.grupp9okw.repository.IAdminVerify;
 import com.example.grupp9okw.repository.INewsCrud;
@@ -13,6 +14,7 @@ public class NewsService {
     //dependency injection  - Spring containern instansierar automatiskt ett objekt av klassen vi vill använda
     @Autowired
     private INewsCrud newsCrud;
+    @Autowired
     private IAdminVerify adminVerify;
 
     public List<News> getAllNews() {
@@ -45,5 +47,9 @@ public class NewsService {
         } else {
             return false;
         }
+    }
+
+    public Boolean checkCredentials(Admin admin) {
+        return adminVerify.checkCredentials(admin);
     }
 }
