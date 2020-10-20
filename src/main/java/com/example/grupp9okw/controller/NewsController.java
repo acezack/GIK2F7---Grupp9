@@ -98,7 +98,7 @@ public class NewsController {
 
         if (newsService.updateNews(tempNews)) {
             model.addAttribute("test", tempNews);
-            return "redirect:/orreskogenskickers/nyheter";
+            return "redirect:/orreskogenskickers/nyheter/?newsId=" + Integer.toString(tempNews.getNewsId());
         }
         else {
             return "error";
