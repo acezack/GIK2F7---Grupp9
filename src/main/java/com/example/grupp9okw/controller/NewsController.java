@@ -24,7 +24,7 @@ public class NewsController {
         int numberOfNews = 0;
         List adminNews = new ArrayList();
 
-        //loopar igenom alla nyheter
+        //loopar igenom alla nyheter med metoden getAllNews() från servicelagret
         for (News news : newsService.getAllNews()) {
             News tempNews = new News();
             tempNews = news;
@@ -98,6 +98,7 @@ public class NewsController {
 
         if (newsService.updateNews(tempNews)) {
             model.addAttribute("test", tempNews);
+            //returnerar nyhetens egna sida som blivit uppdaterad
             return "redirect:/orreskogenskickers/nyheter/?newsId=" + Integer.toString(tempNews.getNewsId());
         }
         else {

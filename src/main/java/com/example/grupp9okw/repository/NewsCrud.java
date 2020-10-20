@@ -73,7 +73,7 @@ public class NewsCrud implements INewsCrud {
     @Override
     public News getNews(int nId) {
             News tempNews = new News();
-            for (News news : getAllNews()) { //återanvänder getAllNews()
+            for (News news : getAllNews()) { //återanvänder getAllNews() för att ta returnera önskad nyhet genom ett id
                 if (news.getNewsId() == nId) {
                     tempNews = news;
                     return tempNews;
@@ -100,8 +100,6 @@ public class NewsCrud implements INewsCrud {
             Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
-
-
     }
 
     @Override
@@ -128,7 +126,8 @@ public class NewsCrud implements INewsCrud {
         try {
             connection = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/IfSCHjTL9N", "IfSCHjTL9N", "DDUbgqOo1P");
             String sqlAddNews = "INSERT INTO `news` (`newsid`, `heading`, `date`, `picture`, `addedby`, `text`) " +
-                    "VALUES (NULL, ?, CURRENT_DATE(), ?, '1', ?)";
+                    "VALUES (NULL, ?, CURRENT_DATE(), ?, '1', ?)"; //newsid inkrementas automatiskt med 1 och konstanten
+                                                                    //CURRENT_DATE lägger in dagens datum i date-fältet
 
 
             PreparedStatement statement = connection.prepareStatement(sqlAddNews);
@@ -145,7 +144,5 @@ public class NewsCrud implements INewsCrud {
             Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
-
-
     }
 }
