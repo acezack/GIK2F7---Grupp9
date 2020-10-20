@@ -18,7 +18,7 @@ public class NewsController {
     @Autowired
     private NewsService newsService;
 
-    @GetMapping(path ="/admin")
+    @GetMapping(path = "/admin")
     public String getPageAdmin(Model model) {
 
         int numberOfNews = 0;
@@ -30,8 +30,7 @@ public class NewsController {
             tempNews = news;
             try {
                 tempNews.setText(news.getText().substring(0, 50));
-            }
-            catch(StringIndexOutOfBoundsException exception) {
+            } catch (StringIndexOutOfBoundsException exception) {
 
             }
             adminNews.add(tempNews);
@@ -44,13 +43,13 @@ public class NewsController {
         return "a_main";
     }
 
-    @GetMapping(path="/nyheter")
+    @GetMapping(path = "/nyheter")
     public String getAllNews(Model model) {
         model.addAttribute("news", newsService.getAllNews());
         return "news";
     }
 
-    @GetMapping(path="/nyheter/")
+    @GetMapping(path = "/nyheter/")
     public String getNews(Model model, @RequestParam int newsId) {
 
         model.addAttribute("news", newsService.getNews(newsId));
@@ -58,14 +57,14 @@ public class NewsController {
         return "a_news";
     }
 
-    @GetMapping(path="/formlaggtillnyhet/")
+    @GetMapping(path = "/formlaggtillnyhet/")
     public String inputNewsPage(Model model) {
 
         return "a_news_add";
     }
 
-    @PostMapping(path="/laggtillnyhet/")
-    public String addNews(Model model, @RequestParam Map<String, String> allFormInput ) {
+    @PostMapping(path = "/laggtillnyhet/")
+    public String addNews(Model model, @RequestParam Map<String, String> allFormInput) {
         News tempNews = new News();
         tempNews.setHeading(allFormInput.get("header"));
         tempNews.setPicture(allFormInput.get("picture"));
@@ -74,13 +73,12 @@ public class NewsController {
         if (newsService.addNews(tempNews)) {
             model.addAttribute("news", tempNews);
             return "a_news_added";
-        }
-        else {
+        } else {
             return "error";
         }
     }
 
-    @GetMapping(path="/redigeranyhet/")
+    @GetMapping(path = "/redigeranyhet/")
     public String inputUpdateNewsPage(Model model, @RequestParam int newsId) {
 
         model.addAttribute("news", newsService.getNews(newsId));
@@ -88,7 +86,7 @@ public class NewsController {
     }
 
 
-    @PostMapping(path="/uppdateranyhet/")
+    @PostMapping(path = "/uppdateranyhet/")
     public String updateNews(@RequestParam Map<String, String> allFormInput, Model model) {
         News tempNews = new News();
         tempNews.setNewsId(Integer.valueOf(allFormInput.get("newsId")));
@@ -100,21 +98,36 @@ public class NewsController {
             model.addAttribute("test", tempNews);
             //returnerar nyhetens egna sida som blivit uppdaterad
             return "redirect:/orreskogenskickers/nyheter/?newsId=" + Integer.toString(tempNews.getNewsId());
-        }
-        else {
+        } else {
             return "error";
         }
     }
 
-    @GetMapping(path="/raderanyhet/")
+    @GetMapping(path = "/raderanyhet/")
     public String deleteNews(Model model, @RequestParam int newsId) {
 
         if (newsService.deleteNews(newsId)) {
             return "a_news_removed";
-        }
-        else {
+        } else {
             return "error";
         }
 
     }
+
+    @GetMapping(path = "/loggain/")
+    public String loginAdmin() {
+
+        return "a_login";
+    }
+
+    @PostMapping(path="/loggainkontroll/")
+    public String loginAdminCheck(@RequestParam Map<String, String> allFormInput, Model model) {
+        if (true){
+            return "a_main";
+        }
+        else {
+            return "error";
+        }
+    }
 }
+
