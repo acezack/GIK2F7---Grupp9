@@ -28,7 +28,12 @@ public class NewsController {
         for (News news : newsService.getAllNews()) {
             News tempNews = new News();
             tempNews = news;
-            tempNews.setText(news.getText().substring(0, 50));
+            try {
+                tempNews.setText(news.getText().substring(0, 50));
+            }
+            catch(StringIndexOutOfBoundsException exception) {
+
+            }
             adminNews.add(tempNews);
             numberOfNews++; //räknar antal news
         }
@@ -58,6 +63,19 @@ public class NewsController {
 
         return "a_news_add";
     }
+
+    @PostMapping(path="/laggtillnyhet/")
+    public String addNews(Model model, @RequestParam Map<String, String> allFormInput ) {
+        News tempNews = new News();
+        tempNews.setHeading(allFormInput.get("header"));
+        tempNews.setPicture(allFormInput.get("picture"));
+        tempNews.setText(allFormInput.get("bodytext"));
+
+        newsService.addNews(tempNews);
+        model.addAttribute("test", tempNews);
+        return "a_news_added";
+    }
+
     @GetMapping(path="/formeditnyhet/")
     public String getInputEditNewsPage(Model model) {
 

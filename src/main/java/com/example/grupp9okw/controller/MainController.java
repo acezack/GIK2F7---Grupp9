@@ -26,7 +26,13 @@ public class MainController {
             News tempNews = new News();
             tempNews = news;
             //Trimmar brödtexten till maximalt 150 tecken
-            tempNews.setText(news.getText().substring(0, 150));
+            try {
+                tempNews.setText(news.getText().substring(0, 150));
+            }
+            catch(StringIndexOutOfBoundsException exception) {
+
+            }
+
             summaryNews.add(tempNews);
         }
         model.addAttribute("summarynews", summaryNews);

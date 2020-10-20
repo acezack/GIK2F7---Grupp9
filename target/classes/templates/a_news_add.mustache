@@ -5,12 +5,12 @@
 
         <h3 class="admin_heading">Lägg till en nyhet</h3><br>
         <div class="addnews__form">
-            <form action="/action_page.php" method="POST">
+            <form action="/orreskogenskickers/laggtillnyhet/" method="POST">
                 <p>Rubrik</p> <input type="text" name="header">
-                <p>Bild</p> <input type="text">
+                <p>Bild</p> <input type="text" name="picture">
                 <p>Brödtext</p>
-                <textarea name="text" rows="25" cols="60">Din artikel...</textarea><br>
-                <button class="form__button">Lägg till</button>
+                <textarea name="bodytext" rows="25" cols="60">Din artikel...</textarea><br>
+                <button type="submit" class="form__button">Lägg till</button>
             </form>
         </div>
 
