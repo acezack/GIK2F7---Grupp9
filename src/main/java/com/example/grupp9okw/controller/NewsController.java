@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -18,6 +20,22 @@ public class NewsController {
 
     @GetMapping(path ="/admin")
     public String getPageAdmin(Model model) {
+
+        int numberOfNews = 0;
+        List adminNews = new ArrayList();
+
+        //loopar igenom alla nyheter
+        for (News news : newsService.getAllNews()) {
+            News tempNews = new News();
+            tempNews = news;
+            tempNews.setText(news.getText().substring(0, 50));
+            adminNews.add(tempNews);
+            numberOfNews++; //räknar antal news
+        }
+        model.addAttribute("adminnews", adminNews);
+
+        model.addAttribute("countnews", numberOfNews);
+        model.addAttribute("news", newsService.getAllNews());
         return "a_main";
     }
 

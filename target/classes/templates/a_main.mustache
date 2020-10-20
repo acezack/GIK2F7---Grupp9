@@ -5,58 +5,27 @@
     <a href="/orreskogenskickers//formlaggtillnyhet/" class="news_item__admin_menu">Skriv en nyhet</a>
 </div>
 <br><br>
-<p>Visar alla nyheter. Totalt: 4 stycken</p>
+<p>Visar alla nyheter. Totalt: {{countnews}} stycken</p>
 
 <div class="main_content">
 
+{{#adminnews}}
 
     <div class="a_news_item">
-        <h5 class="news_item__headingfrontpage">Rubrik på nyhet</h5>
-        <p>Av: <a href="mailto: mail@mail.com">Magnus Adminsson</a> |
-            2020-10-15</p>
-        <div class="news_item__text2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Itaque, adipisci autem pariatur dicta alias quos, aspernatur doloremque est ut aliquid
-            placeat dignissimos praesentium! Esse, quibusdam. Pariatur iusto qu...
+        <h5 class="news_item__headingfrontpage">{{heading}}</h5>
+        <p>Av: <a href="mailto: {{addedBy.email}}">{{addedBy.firstName}} {{addedBy.lastName}}</a> |
+            {{date}}</p>
+        <div class="news_item__text2">{{text}}...
         </div>
-        <div class="news_item__headingfrontpage--button"><a href="#">Läs mer</a>
+        <div class="news_item__headingfrontpage--button"><a href="/orreskogenskickers/nyheter/?newsId={{newsId}}">Läs mer</a>
         </div>
         <div class="a_news_item__menu" >
-            <a href="#" class="news_item__admin_menu">Uppdatera</a>
-            <a href="#" class="news_item__admin_menu">Ta bort</a>
+            <a href="/orreskogenskickers/nyheter/?updateNewsId={{newsId}}" class="news_item__admin_menu">Uppdatera</a>
+            <a href="/orreskogenskickers/nyheter/eraseNewsId={{newsId}}" class="news_item__admin_menu">Ta bort</a>
         </div>
     </div>
 
-    <div class="a_news_item">
-        <h5 class="news_item__headingfrontpage">Rubrik på nyhet</h5>
-        <p>Av: <a href="mailto: mail@mail.com">Magnus Adminsson</a> |
-            2020-10-15</p>
-        <div class="news_item__text2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Itaque, adipisci autem pariatur dicta alias quos, aspernatur doloremque est ut aliquid
-            placeat dignissimos praesentium! Esse, quibusdam. Pariatur iusto qu...
-        </div>
-        <div class="news_item__headingfrontpage--button"><a href="#">Läs mer</a>
-        </div>
-        <div class="a_news_item__menu" >
-            <a href="#" class="news_item__admin_menu">Uppdatera</a>
-            <a href="#" class="news_item__admin_menu">Ta bort</a>
-        </div>
-    </div>
-
-    <div class="a_news_item">
-        <h5 class="news_item__headingfrontpage">Rubrik på nyhet</h5>
-        <p>Av: <a href="mailto: mail@mail.com">Magnus Adminsson</a> |
-            2020-10-15</p>
-        <div class="news_item__text2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Itaque, adipisci autem pariatur dicta alias quos, aspernatur doloremque est ut aliquid
-            placeat dignissimos praesentium! Esse, quibusdam. Pariatur iusto qu...
-        </div>
-        <div class="news_item__headingfrontpage--button"><a href="#">Läs mer</a>
-        </div>
-        <div class="a_news_item__menu" >
-            <a href="#" class="news_item__admin_menu">Uppdatera</a>
-            <a href="#" class="news_item__admin_menu">Ta bort</a>
-        </div>
-    </div>
+{{/adminnews}}
 
 </div>
 <img src="/images/animal-1299089_1280.png" class="main_container__image">
