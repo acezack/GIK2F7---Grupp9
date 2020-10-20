@@ -81,4 +81,10 @@ public class NewsController {
 
         return "a_news_edit";
     }
+
+    @GetMapping(path="/nyheter/")
+    public String deleteNews(Model model, @RequestParam int newsId) {
+    
+        return "delete";
+    }
 }
