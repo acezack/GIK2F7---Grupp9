@@ -39,7 +39,6 @@ public class NewsController {
             numberOfNews++; //räknar antal news
         }
         model.addAttribute("adminnews", adminNews);
-
         model.addAttribute("countnews", numberOfNews);
         model.addAttribute("news", newsService.getAllNews());
         return "a_main";
@@ -106,7 +105,7 @@ public class NewsController {
     }
 
     @GetMapping(path = "/raderanyhet/")
-    public String deleteNews(Model model, @RequestParam int newsId) {
+    public String deleteNews(@RequestParam int newsId) {
 
         if (newsService.deleteNews(newsId)) {
             return "a_news_removed";
@@ -116,7 +115,7 @@ public class NewsController {
 
     }
 
-    @GetMapping(path = "/loggain/")
+    @GetMapping(path="/loggain/")
     public String loginAdmin() {
 
         return "a_login";

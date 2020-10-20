@@ -117,8 +117,6 @@ public class NewsCrud implements INewsCrud {
             Logger.getLogger(NewsCrud.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
-
-
     }
 
     @Override
