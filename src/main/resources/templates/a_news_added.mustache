@@ -1,0 +1,20 @@
+{{#layout}}
+    <h2 class="heading-sections">Admin</h2>
+
+    <div class="main_content">
+
+        <h3 class="admin_heading">Lägg till en nyhet</h3><br>
+        <div class="addnews__form">
+            <form action="/action_page.php" method="POST">
+                <p>Rubrik</p> <input type="text" name="header">
+                <p>Bild</p> <input type="text">
+                <p>Brödtext</p>
+                <textarea name="text" rows="25" cols="60">Din artikel...</textarea><br>
+                <button class="form__button">Lägg till</button>
+            </form>
+        </div>
+
+    </div>
+    <img src="/images/animal-1299089_1280.png" class="main_container__image">
+{{/layout}}
+{{>layout}}
