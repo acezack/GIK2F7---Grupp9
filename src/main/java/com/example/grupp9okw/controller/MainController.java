@@ -40,17 +40,17 @@ public class MainController {
         }
 
     @GetMapping(path="/medlemmar")
-    public String getPageMedlemmar(Model model) {
+    public String getPageMedlemmar() {
         return "members";
     }
 
     @GetMapping(path="/bilder")
-    public String getPagePictures(Model model) {
+    public String getPagePictures() {
         return "images";
     }
 
     @GetMapping(path="/lankar")
-    public String getPageLinks(Model model) {
+    public String getPageLinks() {
         return "links";
     }
 
