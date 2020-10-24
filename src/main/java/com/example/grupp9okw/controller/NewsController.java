@@ -123,6 +123,7 @@ public class NewsController {
 
     @PostMapping("/loggainkontroll/")
     public String loginAdminCheck(@RequestParam Map<String, String> allFormInput) {
+        //Skapar en temporär instans av Admin för att skicka till kontroll.
         Admin tempAdmin = new Admin();
         tempAdmin.setUsername(allFormInput.get("username"));
         tempAdmin.setPassword(allFormInput.get("password"));
